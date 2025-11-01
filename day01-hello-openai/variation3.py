@@ -7,7 +7,8 @@ client= openai.Client(api_key=os.getenv("OPENAI_API_KEY"))
 
 response=client.chat.completions.create(
     model="gpt-4",
-    messages=[{"role": "user" , "content": "tell me a joke"}]
+    messages=[{"role": "user" , "content": "tell me a joke"}],
+    temperature= 0.8
 
 )
 
