@@ -3,7 +3,10 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-messages =[]
+
+messages =[] # keep history
+
+
 client=openai.Client(api_key=os.getenv("OPENAI_API_KEY"))
 
 
@@ -14,9 +17,10 @@ while True:
         print("Goodbye!")
         break
     
+    #add user's message
     messages.append({"role":"user","content":user_input})
 
-    #Model definition
+    #get response
     response=client.chat.completions.create(
         model="gpt-5-nano",
         messages= messages
@@ -27,6 +31,7 @@ while True:
     reply= response.choices[0].message.content
     print("\n AI:", reply)
 
+    # add assistant's message
     messages.append({"role":"assistant","content":reply})
 
 
