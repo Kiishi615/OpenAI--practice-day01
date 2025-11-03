@@ -17,6 +17,5 @@ response=client.chat.completions.create(
     messages= messages
 )
 
-messages.append({"role":"user","content":user_text})
 
 print(response.choices[0].message.content)
