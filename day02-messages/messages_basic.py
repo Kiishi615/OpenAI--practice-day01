@@ -4,8 +4,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client=openai.Client(api_key=os.getenv("OPENAI_API_KEY"))
-response=client.chat.completions.create(
-    model="gpt-5-nano",
-    messages=[{"role":"system","content":"Say Hello"}]
-)
+messages = []
+messages.append({"role":"system", "content": "You are helpful"})
+messages.append({"role":"system", "content": "Hi there"})
+
+print("message count:", len(messages))
+print("first message :", messages[0])
+print("second message :", messages[1])
+
