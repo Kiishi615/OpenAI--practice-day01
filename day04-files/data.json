@@ -1,1 +1,48 @@
-{"name": "test"}
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Amaka Johnson",
+      "email": "amaka.johnson@example.com",
+      "age": 28,
+      "is_active": true,
+      "joined_on": "2023-06-14",
+      "preferences": {
+        "theme": "dark",
+        "language": "en",
+        "notifications": true
+      }
+    },
+    {
+      "id": 2,
+      "name": "Tunde Balogun",
+      "email": "tunde.balogun@example.com",
+      "age": 34,
+      "is_active": false,
+      "joined_on": "2021-11-30",
+      "preferences": {
+        "theme": "light",
+        "language": "fr",
+        "notifications": false
+      }
+    },
+    {
+      "id": 3,
+      "name": "Zainab Yusuf",
+      "email": "zainab.yusuf@example.com",
+      "age": 24,
+      "is_active": true,
+      "joined_on": "2024-03-01",
+      "preferences": {
+        "theme": "dark",
+        "language": "en",
+        "notifications": true
+      }
+    }
+  ],
+  "meta": {
+    "count": 3,
+    "generated_at": "2025-11-05T20:00:00Z",
+    "source": "mock_data_generator"
+  }
+}
