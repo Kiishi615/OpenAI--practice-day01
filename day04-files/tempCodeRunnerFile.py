@@ -1,4 +1,2 @@
-import pandas
-
-df= pandas.read_csv('numbers.csv')
-print(df)
+files =glob.glob(os.path.join(folder_path, '*.txt'))
+# print(files)

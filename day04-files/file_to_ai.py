@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-with open('test.txt','r')as f:
+with open('test.txt','r', encoding='utf-8', errors='replace')as f:
     text= f.read()
 
 
