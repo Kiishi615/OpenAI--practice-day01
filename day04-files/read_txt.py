@@ -1,3 +1,4 @@
-with open("test.txt", "r") as f:
-    content= f.read()
-    print("File contents:", content)
+# read_txt.py
+with open('test.txt', 'r', encoding='utf-8', errors='ignore') as f:
+    content = f.read()
+    print(content)
