@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 def setup_api():
     load_dotenv()
     try:
-        api_key=api_key=os.getenv("OPENAI_API_KEY")
+        api_key=os.getenv("OPENAI_API_KEY")
         if not api_key:
             raise ValueError("API key missing")
         client=openai.Client(api_key=api_key)
@@ -21,7 +21,7 @@ def setup_api():
 def get_user_input():
     return input("\nYou: ")
 
-def save_chat_log():
+def save_chat_log(messages):
     with open("chat_log.txt","w")as f:
         f.write(str(messages))
             
@@ -47,6 +47,7 @@ def main():
         user_input=get_user_input()
         if user_input=="quit":
             messages.append({"role":"user", "content": user_input})
+            save_chat_log(messages)
             break
         messages.append({"role":"user", "content": user_input})
         
@@ -56,7 +57,8 @@ def main():
 
         display_response(reply)
         
-main()
+if __name__=="__main__":
+    main()
 
 
 
