@@ -21,9 +21,15 @@ def setup_api():
 def get_user_input():
     return input("\nYou: ")
 
-def save_chat_log(messages):
-    with open("chat_log.txt","w")as f:
-        f.write(str(messages))
+def get_user_file():
+    return input("\nWhat file do you want: ")
+
+def save_chat_log(messages, filename):
+    with open(f"{filename}_processed","w")as f:
+        for msg in messages:
+            f.write(f"{msg['role']}: {msg['content']}\n")  # \n = new line
+            f.write("-" * 50 + "\n") 
+        
             
 def get_ai_response(client, messages):
     response=client.chat.completions.create(
