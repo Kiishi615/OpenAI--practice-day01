@@ -1,7 +1,7 @@
 import openai
 import os, sys
 from dotenv import load_dotenv
-
+import json
 
 
 def setup_api():
@@ -31,9 +31,21 @@ def save_chat_log(messages, filename):
             f.write("-" * 50 + "\n") 
         
             
-def get_ai_response(client, messages):
+def get_ai_response(client, messages,config=None):
+    if config is None:
+        print("INFO: No config provided. Loading default from 'config.json'.")
+        try:
+            with open('config.json', 'r') as f:
+                config = json.load(f)
+        except FileNotFoundError:
+            print("WARNING: 'config.json' not found. Using an empty config.")
+            config = {} # Use an empty dict as a safe fallback
+        except json.JSONDecodeError:
+            print("WARNING: 'config.json' is corrupted. Using an empty config.")
+            config = {} # Also a safe fallback
+    
     response=client.chat.completions.create(
-        model="gpt-5-nano",
+        **config,
         messages=messages
     )
 
