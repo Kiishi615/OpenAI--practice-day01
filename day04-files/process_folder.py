@@ -2,7 +2,6 @@ import openai
 import os, sys
 from dotenv import load_dotenv
 import glob
-import os
 
 
 load_dotenv()
