@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 def split_into_chunks(text, chunk_size=100):
     words=text.split()
     chunks=[]
@@ -14,8 +14,14 @@ def split_into_chunks(text, chunk_size=100):
     
     return chunks
 
-with open("Sample Documents/Stars_Explode.txt", "r") as f:
-    text=f.read()
+# with open("Sample Documents/Stars_Explode.txt", "r") as f:
+#     text=f.read()
+
+folder=Path('Sample Documents')
+file='Stars_Explode.txt'
+file_location=folder/file
+text =file_location.read_text()
+
 split=split_into_chunks(text)
 print(split)
 
