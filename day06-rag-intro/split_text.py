@@ -14,16 +14,21 @@ def split_into_chunks(text, chunk_size=100):
     
     return chunks
 
-# with open("Sample Documents/Stars_Explode.txt", "r") as f:
-#     text=f.read()
+def Text_handler(filename):
+    folder=Path('Sample Documents')
+    with open(f"{folder}/{filename}", "r") as f:
+        text=f.read()
+    return text
+if __name__=="__main__":
+    print(Text_handler("Stars_Explode.txt"))
 
-folder=Path('Sample Documents')
-file='Stars_Explode.txt'
-file_location=folder/file
-text =file_location.read_text()
+    folder=Path('Sample Documents')
+    file='Stars_Explode.txt'
+    file_location=folder/file
+    text =file_location.read_text()
 
-split=split_into_chunks(text)
-print(split)
+    split=split_into_chunks(text)
+    print(split)
 
 
-# print(os.path.exists(r"Sample Documents/Stars_Explode.txt"))
+    # print(os.path.exists(r"Sample Documents/Stars_Explode.txt"))
