@@ -8,37 +8,67 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-
-
-client=chromadb.Client()
-
 file= input("What file do you want to ask a question?") +".txt"
 print(f"Great! Accessing {file}")
 
-openai_ef=OpenAIEmbeddingFunction(
-    api_key=os.getenv("OPENAI_API_KEY"),
-    model_name="text-embedding-3-small"
-)
 
-text=Text_handler(file)
-chunks=split_into_chunks(text)
 
-collection= client.create_collection(
-    name="Rand_text",
-    embedding_function=openai_ef
-)
 
-collection.add(
-    documents= chunks,
-    ids=[f"chunk_{i}" for i in range(len(chunks))]
+def initialize_chroma_collection(collection_name):
+    client=chromadb.Client()
     
-)
+    openai_ef=OpenAIEmbeddingFunction(
+        api_key=os.getenv("OPENAI_API_KEY"),
+        model_name="text-embedding-3-small"
+    )
+    # Logic to get_or_create_collection
+    collection= client.create_collection(
+        name=f"{collection_name}",
+        embedding_function=openai_ef
+    )
+
+    return collection
+
+
+
+
+def ingest_document(file, collection):
+    text=Text_handler(file)
+    chunks=split_into_chunks(text)
+    collection.add(
+        documents= chunks,
+        ids=[f"chunk_{i}" for i in range(len(chunks))]
+    )
+    return collection
+
+
+
 question = input("What's your question?")
 
-results=collection.query(
-    query_texts=[f"{question}"],
-    n_results=3
-)
 
-print("Found chunks:",results['documents'][0][0])
+
+def query_database(question, collection, n_results=1):
+    results=collection.query(
+        query_texts=[f"{question}"],
+        n_results=n_results
+    )
+    print("Found chunks:",results['documents'][0][0])
+    
+
+
+def main():
+    empty_collection =initialize_chroma_collection("Randos")
+    full_collection =ingest_document(file, empty_collection)
+    answer= query_database(question, full_collection)
+    return answer
+
+main()
+
+
+
+
+
+
+
+
+
