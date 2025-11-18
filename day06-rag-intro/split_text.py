@@ -16,7 +16,7 @@ def split_into_chunks(text, chunk_size=100):
 
 def Text_handler(filename):
     folder=Path('Sample Documents')
-    with open(f"{folder}/{filename}", "r") as f:
+    with open(f"{folder}/{filename}", "r", encoding="utf-8") as f:
         text=f.read()
     return text
 if __name__=="__main__":
