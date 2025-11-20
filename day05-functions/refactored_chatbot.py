@@ -2,7 +2,7 @@ import openai
 import os, sys
 from dotenv import load_dotenv
 import json
-
+from pathlib import Path
 
 def setup_api():
     load_dotenv()
@@ -31,11 +31,15 @@ def save_chat_log(messages, filename):
             f.write("-" * 50 + "\n") 
         
             
-def get_ai_response(client, messages,config=None):
+def get_ai_response(client, messages, config=None):
+    current_dir = Path(__file__).parent
+    config_path = current_dir / 'config.json'
+    
+    
     if config is None:
-        print("INFO: No config provided. Loading default from 'config.json'.")
+        # print("INFO: No config provided. Loading default from 'config.json'.")
         try:
-            with open('config.json', 'r') as f:
+            with open(config_path, 'r') as f:
                 config = json.load(f)
         except FileNotFoundError:
             print("WARNING: 'config.json' not found. Using an empty config.")
@@ -65,13 +69,14 @@ def main():
         user_input=get_user_input()
         if user_input=="quit":
             messages.append({"role":"user", "content": user_input})
-            save_chat_log(messages)
+            save_chat_log(messages, filename='words')
             break
         messages.append({"role":"user", "content": user_input})
         
         reply= get_ai_response(client, messages)
 
         messages.append({"role":"assistant", "content":reply})
+        
 
         display_response(reply)
         

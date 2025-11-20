@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-file= input("What file do you want to ask a question?") +".txt"
-print(f"Great! Accessing {file}")
+# file= input("What file do you want to ask a question?") +".txt"
+# print(f"Great! Accessing {file}")
 
 
 
@@ -43,26 +43,27 @@ def ingest_document(file, collection):
 
 
 
-question = input("What's your question?")
+# question = input("What's your question?")
 
 
 
-def query_database(question, collection, n_results=1):
+def query_database(question, collection, n_results=3):
     results=collection.query(
         query_texts=[f"{question}"],
         n_results=n_results
     )
-    print("Found chunks:",results['documents'][0][0])
+    return results['documents'][0]
     
 
 
 def main():
     empty_collection =initialize_chroma_collection("Randos")
     full_collection =ingest_document(file, empty_collection)
-    answer= query_database(question, full_collection)
-    return answer
+    answers= query_database(question, full_collection)
+    print(answers)
 
-main()
+if __name__ == "__main__":
+    main()
 
 
 
