@@ -1,18 +1,7 @@
-p=[]
+from typing import Optional
 
+name: Optional[str] = None
 
-def get_prime(n):
-    global p
-    global d
-    for i in range(2, n+1):
-        d=0
-        for t in range(2, i):
-            if  i%t==0:
-                d+=1  
-        if d==0:
-                p.append(i)
+name=14
 
-
-get_prime(355)
-
-print(p)
+print(name)

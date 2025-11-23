@@ -4,6 +4,23 @@ from dotenv import load_dotenv
 import json
 from pathlib import Path
 
+
+def load_config():
+        current_dir = Path(__file__).parent
+        config_path = current_dir / 'config.json'
+        
+
+        try:
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+            
+        except FileNotFoundError:
+            print("WARNING: 'config.json' not found. Using an empty config.")
+            config = {} # Use an empty dict as a safe fallback
+        except json.JSONDecodeError:
+            print("WARNING: 'config.json' is corrupted. Using an empty config.")
+            config = {} # Also a safe fallback
+        return config
 def setup_api():
     load_dotenv()
     try:
@@ -19,34 +36,19 @@ def setup_api():
         sys.exit(1)
 
 def get_user_input():
-    return input("\nYou: ")
+    return input("\nYou: ").strip()
 
 def get_user_file():
-    return input("\nWhat file do you want: ")
+    return input("\nWhat file do you want: ").strip()
 
 def save_chat_log(messages, filename):
-    with open(f"{filename}_processed","w")as f:
+    with open(f"{filename}_processed.txt","w")as f:
         for msg in messages:
             f.write(f"{msg['role']}: {msg['content']}\n")  # \n = new line
             f.write("-" * 50 + "\n") 
         
             
-def get_ai_response(client, messages, config=None):
-    current_dir = Path(__file__).parent
-    config_path = current_dir / 'config.json'
-    
-    
-    if config is None:
-        # print("INFO: No config provided. Loading default from 'config.json'.")
-        try:
-            with open(config_path, 'r') as f:
-                config = json.load(f)
-        except FileNotFoundError:
-            print("WARNING: 'config.json' not found. Using an empty config.")
-            config = {} # Use an empty dict as a safe fallback
-        except json.JSONDecodeError:
-            print("WARNING: 'config.json' is corrupted. Using an empty config.")
-            config = {} # Also a safe fallback
+def get_ai_response(client, messages, config):
     
     response=client.chat.completions.create(
         **config,
@@ -73,7 +75,7 @@ def main():
             break
         messages.append({"role":"user", "content": user_input})
         
-        reply= get_ai_response(client, messages)
+        reply= get_ai_response(client, messages, config)
 
         messages.append({"role":"assistant", "content":reply})
         
@@ -81,6 +83,8 @@ def main():
         display_response(reply)
         
 if __name__=="__main__":
+    config=load_config()
+
     main()
 
 

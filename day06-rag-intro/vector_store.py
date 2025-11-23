@@ -3,7 +3,7 @@ import chromadb
 import os
 from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 from pathlib import Path
-from split_text import Text_handler, split_into_chunks
+from split_text import text_handler, split_into_chunks
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -21,7 +21,6 @@ def initialize_chroma_collection(collection_name):
         api_key=os.getenv("OPENAI_API_KEY"),
         model_name="text-embedding-3-small"
     )
-    # Logic to get_or_create_collection
     collection= client.create_collection(
         name=f"{collection_name}",
         embedding_function=openai_ef
@@ -29,11 +28,8 @@ def initialize_chroma_collection(collection_name):
 
     return collection
 
-
-
-
 def ingest_document(file, collection):
-    text=Text_handler(file)
+    text=text_handler(file)
     chunks=split_into_chunks(text)
     collection.add(
         documents= chunks,
@@ -41,11 +37,7 @@ def ingest_document(file, collection):
     )
     return collection
 
-
-
 # question = input("What's your question?")
-
-
 
 def query_database(question, collection, n_results=3):
     results=collection.query(

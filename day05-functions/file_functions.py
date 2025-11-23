@@ -1,15 +1,31 @@
-def read_text_file(filename):
-    with open(filename, 'r') as f:
-        content= f.read()
-    return content
+from typing import Optional, Any
 
-def save_text_file(filename, content):
-    with open(filename, 'w') as f:
+def read_text_file(filename:str) -> Optional[str]:
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            content= f.read()
+        return content
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' was not found.")
+    except Exception as e:
+        print(f"Some other error {e} occured")
+
+    
+
+
+def save_text_file(filename:str, content:Any):
+    try:
+        with open(filename, 'w',encoding='utf-8') as f:
             f.write(str(content))
+    except Exception as e:
+        print(f"Error writing file: {e}")
 
 def append_to_file(filename, content):
-    with open(filename, 'a') as f:
-        f.write(str(content))
+    try:
+        with open(filename, 'a') as f:
+            f.write(str(content))
+    except Exception as e:
+        print(f"Error occured appending to file: {e}")
 
 if __name__== "__main__" :
     test_file = "test.txt"

@@ -1,38 +1,46 @@
-import openai
-import os, sys
-from dotenv import load_dotenv
-import glob
-import json
-
-with open('config.json','r')as f:
-    config=json.load(f)
-
-from refactored_chatbot import *
+from refactored_chatbot import  (load_config, setup_api, get_user_input, 
+                                get_user_file,save_chat_log,
+                                get_ai_response,  display_response)
 from file_functions import read_text_file, save_text_file
 
-def main():
-    filename=get_user_file()
-    client = setup_api()
-    messages=[]
-    while True:
-        user_input =get_user_input()
-        user_text=read_text_file(filename)
-        if user_input=="quit":
-            reply= get_ai_response(client, messages, config)
 
-            messages.append({"role":"assistant", "content":reply})
-            save_chat_log(messages, filename)
+
+def main():
+    # 1. Setup
+    config = load_config()
+    client = setup_api()
+
+    # 2. File to read
+    filename = get_user_file()
+    messages= []
+    file_content = read_text_file(filename)
+    if file_content:
+        print(f"---- Loaded content from {filename}----")
+        messages.append({"role":"system", "content": file_content})
+
+    
+
+    #3. The Chat bot
+    while True:
+        user_input = get_user_input()
+        if not user_input:
+            continue
+        
+        #4. Exitting the bot
+        if user_input.lower()=="quit":
+            print("Saving chat log...")
+            save_name = input("Enter filename to save log: ")
+            save_chat_log(messages, save_name)
             break
         
-        messages.append({"role":"user", "content": user_text})
-
+        
+        ## Code continues
         messages.append({"role":"user", "content": user_input})
 
         
-        reply= get_ai_response(client, messages, config)
+        reply = get_ai_response(client, messages, config)
 
         messages.append({"role":"assistant", "content":reply})
-
         display_response(reply)
-
-main()
+if __name__=="__main__":
+    main()

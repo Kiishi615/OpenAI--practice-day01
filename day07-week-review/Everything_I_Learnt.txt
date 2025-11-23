@@ -1,0 +1,9 @@
+How to:
+        call APIs
+        Use git for version control
+        Use chatbots within terminal
+        Read files
+        Split text
+        Embed them using chromadb or openai
+        handle specific errors
+        Store vectors

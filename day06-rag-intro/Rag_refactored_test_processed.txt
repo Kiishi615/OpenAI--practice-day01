@@ -1,0 +1,12 @@
+system: You are a helpful assistant that answers 
+                questions based on the provided context from the document. 
+                If the contex doesn't contain the answer, say you don't know.
+--------------------------------------------------
+user: Why do butterflies migrate
+--------------------------------------------------
+assistant: Butterflies migrate for various reasons, including finding enough nectar along the route, avoiding predators and bad weather, and reaching their destination before conditions become too harsh. They also migrate to track seasonal changes in host plants and climate. Additionally, environmental factors such as habitat loss, herbicide use, deforestation, urbanization, and climate change can influence migratory butterflies, making migration a necessary survival strategy for some species.
+--------------------------------------------------
+user: Why do butterflies have guns
+--------------------------------------------------
+assistant: I don't have information about that in the document.
+--------------------------------------------------
