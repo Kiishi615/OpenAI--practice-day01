@@ -55,13 +55,12 @@ def main():
 
 
     print(f"\n Great! Accessing {file}")
-        
+
     empty_collection =initialize_chroma_collection("DEFAULT_COLLECTION_NAME")
     full_collection =ingest_document(file_path, empty_collection)
 
 
     while True:
-
         user_input=get_user_input()
         if user_input.lower()=="quit":
             print("Saving chat log...")
@@ -77,7 +76,7 @@ def main():
             {"role": "system", "content":f"""Answer based on this context only:
                 {context}
                 
-
+                
                 If the context doesn't answer the question, respond with: I don't have
                 information about that in the document"""}
         ]

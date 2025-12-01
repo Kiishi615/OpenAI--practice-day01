@@ -8,12 +8,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# file= input("What file do you want to ask a question?") +".txt"
-# print(f"Great! Accessing {file}")
-
-
-
-
 def initialize_chroma_collection(collection_name):
     client=chromadb.Client()
     
@@ -37,7 +31,7 @@ def ingest_document(file, collection):
     )
     return collection
 
-# question = input("What's your question?")
+
 
 def query_database(question, collection, n_results=3):
     results=collection.query(

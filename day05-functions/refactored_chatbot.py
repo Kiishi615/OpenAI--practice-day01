@@ -28,13 +28,13 @@ def setup_api():
         if not api_key:
             raise ValueError("API key missing")
         client=openai.Client(api_key=api_key)
-        return client
+        
 
     except Exception as e:
         print(f"some error:{e}")
         client= None
-        sys.exit(1)
 
+    return client
 def get_user_input():
     return input("\nYou: ").strip()
 
@@ -44,10 +44,10 @@ def get_user_file():
 def save_chat_log(messages, filename):
     with open(f"{filename}_processed.txt","w")as f:
         for msg in messages:
-            f.write(f"{msg['role']}: {msg['content']}\n")  # \n = new line
-            f.write("-" * 50 + "\n") 
-        
-            
+            f.write(f"{msg['role']}: {msg['content']}\n")
+            f.write("-" * 50 + "\n")
+
+
 def get_ai_response(client, messages, config):
     
     response=client.chat.completions.create(
