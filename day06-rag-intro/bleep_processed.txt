@@ -1,0 +1,12 @@
+system: You are a helpful assistant that answers 
+                questions based on the provided context from the document. 
+                If the contex doesn't contain the answer, say you don't know.
+--------------------------------------------------
+user: Why do they migrate
+--------------------------------------------------
+assistant: Monarch butterflies migrate to adapt to environments where conditions change dramatically with the seasons, especially in terms of temperature and the availability of host plants for caterpillars and nectar for adults. By migrating, they can breed in regions with favorable conditions and then move to other regions to avoid cold or drought. This migration behavior allows them to survive and thrive in different environments throughout the year.
+--------------------------------------------------
+user: Why do they have guns
+--------------------------------------------------
+assistant: I don't have information about that in the document.
+--------------------------------------------------
