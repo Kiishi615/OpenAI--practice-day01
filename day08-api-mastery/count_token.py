@@ -1,6 +1,5 @@
-import os, sys
-from dotenv import load_dotenv
-import openai, tiktoken
+import sys
+import tiktoken
 from pathlib import Path
 
 
@@ -12,14 +11,12 @@ import enable_imports
 from refactored_chatbot import  (load_config, setup_api, get_user_input, 
                                 get_user_file, save_chat_log,
                                 get_ai_response,  display_response)
-from dotenv import load_dotenv
-
 
 # config = load_config()
 # client = setup_api()
 
-def num_tokens_from_string(string:str) -> int:
-    encoding = tiktoken.encoding_for_model("gpt-5-nano")
+def num_tokens_from_string(string:str, model:str ="gpt-5-nano") -> int:
+    encoding = tiktoken.encoding_for_model(f"{model}")
     num_tokens = len(encoding.encode(string))
     return num_tokens
 
@@ -103,19 +100,21 @@ def assert_token_limit(model_name: str, input_tokens: int):
 
 
 if __name__ == "__main__":
+    model = "gpt-5-nano"
+    
     user_input = get_user_input()
 
 
-    num_tokens = num_tokens_from_string(user_input)
+    num_tokens = num_tokens_from_string(user_input, model)
     print(f"\n After encoding, it's {num_tokens} tokens")
 
-    preffered_model = get_user_input()
+    # preffered_model = get_user_input()
 
 
-    cost = cost_estimate(preffered_model, num_tokens)
+    # cost = cost_estimate(preffered_model, num_tokens)
 
-    assert_token_limit(preffered_model, num_tokens)
-    print(cost)
+    # assert_token_limit(preffered_model, num_tokens)
+    # print(cost)
 
 
 

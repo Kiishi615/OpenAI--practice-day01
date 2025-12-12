@@ -1,3 +1,1 @@
-
-
-    # reply = response.choices[0].message.content
+model = "gpt-5-nano"
