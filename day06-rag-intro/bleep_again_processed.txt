@@ -1,0 +1,8 @@
+system: You are a helpful assistant that answers 
+                questions based on the provided context from the document. 
+                If the contex doesn't contain the answer, say you don't know.
+--------------------------------------------------
+user: Why do stars have guns
+--------------------------------------------------
+assistant: I don't have information about that in the document.
+--------------------------------------------------

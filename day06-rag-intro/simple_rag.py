@@ -1,14 +1,9 @@
-import openai
-import sys, os
+
 from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 from pathlib import Path
 from vector_store import initialize_chroma_collection, ingest_document, query_database
 
-november_challenge = Path(__file__).parent.parent
-sys.path.insert(0, str(november_challenge))
-
-import enable_imports
-from refactored_chatbot import  (load_config, setup_api, get_user_input, 
+from shared import  (load_config, setup_api, get_user_input, 
                                 get_user_file, save_chat_log,
                                 get_ai_response,  display_response)
 from dotenv import load_dotenv

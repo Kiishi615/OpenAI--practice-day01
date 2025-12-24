@@ -1,6 +1,8 @@
-from pathlib import Path
-
-# # Setup import paths for project modules
-# november_challenge = Path(__file__).parent.parent
-# sys.path.insert(0, str(november_challenge))
-# import enable_imports
+temp_messages = [
+#             {"role": "system", "content":f"""Answer based on this context only:
+#                 {context}
+                
+                
+#                 If the context doesn't answer the question, respond with: I don't have
+#                 information about that in the document"""}
+#         ]
