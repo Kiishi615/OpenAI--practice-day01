@@ -3,14 +3,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def get_news():
+def get_news(topic):
     API_KEY = os.getenv("NEWS_API_KEY")
-
-    city = input(f"What news are you curious about?:  ")
 
     url = ('https://newsapi.org/v2/top-headlines?'
             # 'sources=bbc-news&'
-            f"q={city}&"
+            f"q={topic}&"
             f'apiKey={API_KEY}')
 
 

@@ -1,0 +1,25 @@
+2025-12-27 00:47:14,086 -__main__ - INFO -<module>- ============================================================
+2025-12-27 00:47:14,086 -__main__ - INFO -<module>- multi_assistant STARTED
+2025-12-27 00:47:14,087 -__main__ - INFO -<module>- Logging to : logs/multi_assistant_20251227_004714.log
+2025-12-27 00:47:14,087 -__main__ - INFO -<module>- ============================================================
+2025-12-27 00:47:14,453 -__main__ - INFO -<module>- Configuration loaded and API initialized
+2025-12-27 00:47:14,453 -__main__ - INFO -<module>- Ready for user input
+2025-12-27 00:47:55,421 -__main__ - INFO -<module>- Query #1: I live in tokyo, do I need an umbrella today?
+2025-12-27 00:47:57,704 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 00:47:57,714 -__main__ - INFO -classify_intent- Intent classified as : weather
+2025-12-27 00:47:57,715 -__main__ - INFO -<module>- Processing weather request
+2025-12-27 00:47:58,816 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 00:47:58,817 -__main__ - INFO -location_extractor- Extracted location: tokyo
+2025-12-27 00:47:58,818 -__main__ - INFO -<module>- fetching weather for: tokyo
+2025-12-27 00:48:01,538 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 00:48:01,543 -__main__ - INFO -<module>- Weather response delivered
+2025-12-27 00:48:22,128 -__main__ - INFO -<module>- Query #2: , setup_logging)
+2025-12-27 00:48:23,731 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 00:48:23,733 -__main__ - INFO -classify_intent- Intent classified as : chat
+2025-12-27 00:48:23,734 -__main__ - INFO -<module>- Processing chat request
+2025-12-27 00:48:25,970 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 00:48:25,976 -__main__ - INFO -<module>- Chat response delivered
+2025-12-27 00:48:56,019 -__main__ - INFO -<module>- Query #3: quit
+2025-12-27 00:48:56,019 -__main__ - INFO -<module>- User requested quit
+2025-12-27 00:48:56,019 -__main__ - INFO -<module>- Session Ended. Total queries: 3
+2025-12-27 00:48:56,019 -__main__ - INFO -<module>- ============================================================

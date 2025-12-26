@@ -1,57 +1,32 @@
-import sys, os
-from pathlib import Path
-import time
-import asyncio
-from openai import AsyncOpenAI, RateLimitError
+import os,time, asyncio, logging
+from openai import AsyncOpenAI, RateLimitError, APIConnectionError
 from dotenv import load_dotenv
-import logging
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+from .refactored_chatbot import  (load_config, setup_api)
+from .logging_config import  setup_logging
 
-formatter = logging.Formatter(
-    '%(asctime)s - %(levelname)s - %(funcName)s - %(message)s'
-)
-# File handler
-file_handler = logging.FileHandler('app.log', mode='a')
-file_handler.setFormatter(formatter)
-
-# Console handler
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(formatter)
-
-logger.addHandler(file_handler)
-logger.addHandler(console_handler)
-
-
-# Setup import paths for project modules
-november_challenge = Path(__file__).parent.parent
-sys.path.insert(0, str(november_challenge))
-import enable_imports
-
-
-from refactored_chatbot import  (load_config, setup_api)
-
-from openai import RateLimitError, APIConnectionError
 def call_with_retry():
-    logging.info("Application started")
+    """Retry connection setup"""
+
+    logging.info("Attempting to initialize API client")
     for attempt in range(5):
         try:
             client = setup_api()
             logger.info("client initialised successfully")
             return client
         except (RateLimitError, APIConnectionError) as e:
-            logger.warning(f"You're hitting rate limits: {e}")
             wait = 2 ** attempt
+            logger.warning(f"You're hitting rate limits: {e}")
             logger.warning(f"Attempt {attempt} failed. Waiting {wait}s...")
             time.sleep(wait)
-        
         except Exception as e:
             logger.error(f"Some error : {e} happened")
     logger.error("All retry attempts exhausted")
     return None
 
 def response_with_retry(client, messages, config):
+    """Retry API calls with exponential backoff"""
+
     for attempt in range(5):
         try:
             response=client.chat.completions.create(
@@ -62,14 +37,15 @@ def response_with_retry(client, messages, config):
             reply=response.choices[0].message.content
             return reply
         except (RateLimitError, APIConnectionError) as e:
-            logger.warning(f"You're hitting rate limits: {e}")
             wait = 2 ** attempt
+            logger.warning(f"You're hitting rate limits: {e}")
             logger.warning(f"Attempt {attempt} failed. Waiting {wait}s...")
             time.sleep(wait)
     
         except Exception as e:
             logger.error(f"Some error : {e} happened")
             return None
+
 def spam_api():
     client = setup_api()
     config = load_config()
@@ -80,8 +56,6 @@ def spam_api():
         
         # Use your retry function here
         reply = response_with_retry(client, messages, config)
-
-
 
 def setup_async_api():
     load_dotenv()
@@ -124,6 +98,11 @@ async def spam_api_concurrently():
     await asyncio.gather(*tasks)
     
     await client.close()
+
 if __name__ == "__main__":
+    log_file= setup_logging()
+    logger = logging.getLogger(__name__)
+    messages = []
+    config = load_config
     client = call_with_retry()
     response_with_retry(client, messages, config)
