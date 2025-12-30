@@ -1,0 +1,13 @@
+- Location: Lagos, Lagos, Nigeria (lat 6.4531, lon 3.3958; Africa/Lagos)
+- Local time: 2025-12-21 01:27 (last updated 2025-12-21 01:15)
+- Sky condition: Clear (night); cloud cover 25%
+- Temperature: 27.1°C (80.8°F); feels like 30.2°C (86.3°F)
+- Wind: SW at 8.7 mph (14.0 kph), gusts up to 11.2 mph (18.1 kph); wind direction 227°
+- Humidity: 89%
+- Pressure: 1010.0 mb (29.83 in)
+- Precipitation: 0.0 mm
+- Dew point: 23.7°C (74.6°F)
+- Visibility: 10.0 km (6.0 miles)
+- UV index: 0.0
+- Wind chill: 27.9°C (82.3°F); Heat index: 31.8°C (89.3°F)
+- Solar radiation: short_rad 0, diff_rad 0, dni 0, gti 0

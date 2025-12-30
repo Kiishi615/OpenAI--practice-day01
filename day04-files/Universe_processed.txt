@@ -1,17 +1,15 @@
-- 13.8 billion years ago: there was nothing—no stars, planets, space, or time
-- Then the Big Bang: the universe began and expanded rapidly
-- Early moments: pure energy followed by protons, neutrons, and electrons
-- As it cooled: atoms formed, mostly hydrogen and helium
-- Gravity gathered these atoms to form the first stars
-- Inside stars: nuclear reactions created heavier elements (carbon, oxygen, iron)
-- Massive stars exploded as supernovae, scattering elements into space
-- New generations of stars and planets formed from this enriched material
-- Our solar system formed about 4.6 billion years ago
-- Dust and gas around the young Sun clumped to make Earth and other planets
-- On Earth, chemistry led to biology; life appeared and evolved
-- Humans emerged and wonder about where it all began
-- Today the universe continues to expand; galaxies recede from each other
-- Dark matter and dark energy dominate the cosmos and are not well understood
-- The universe is vast—billions of galaxies, each with billions of stars
-- A small blue planet, Earth, hosts life that can ask why we are here
-- The story continues, still unfolding and unknown
+- About 13.8 billion years ago there was nothing; then the Big Bang created the universe.
+- The expansion happened from a tiny point, faster than light.
+- In the first seconds, the universe contained pure energy and simple particles: protons, neutrons, and electrons.
+- As it cooled, atoms formed, mostly hydrogen and helium.
+- Gravity gathered these atoms into the first stars.
+- Inside stars, nuclear fusion created heavier elements like carbon, oxygen, and iron.
+- Massive stars exploded as supernovae, scattering elements into space and seeding new stars and planets.
+- Our solar system formed about 4.6 billion years ago from dust and gas around the young Sun.
+- Earth and other planets formed; chemistry on Earth led to biology, life appeared and evolved, culminating in humans.
+- Humans look up and wonder where it all began.
+- The universe is still expanding; galaxies move away from one another.
+- The space between galaxies is filled with dark matter and dark energy, which make up most of everything and are not well understood.
+- The universe is vast—billions of galaxies, each with billions of stars.
+- A small blue planet, Earth, became home to life capable of asking why we are here.
+- The story continues, still unfolding and unknown.

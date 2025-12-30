@@ -1,0 +1,66 @@
+Feb. 22, 2005
+
+Elvia Thompson
+Headquarters, Washington
+(Phone: 202/358-1696) 
+
+Gray Creech
+Dryden Flight Research Center, Calif.
+(Phone: 661/276-2662)RELEASE: 05-055
+
+NASA HELPS LIFT SPACE SHUTTLE RETURN TO FLIGHT EFFORTS
+
+NASA engineers continue to acquire data on how insulating foam debris 
+behaves when shed from the Space Shuttle's external fuel tank during 
+launch. NASA's Dryden Flight Research Center at Edwards Air Force 
+Base, Calif., is conducting a series of flight tests of the debris, 
+known as divots, as part of the Return to Flight team effort. 
+
+The Lifting Insulating Foam Trajectory (LIFT) flight test series at 
+Dryden is using the research center's F-15B jet Research Testbed 
+aircraft to test divots at speeds up to approximately twice the speed 
+of sound (Mach 2). 
+
+Small divots pop off the external tank when the Thermal Protection 
+System (TPS) foam fails. This occurs as a result of decreasing 
+atmospheric pressure combined with increased heating during Shuttle 
+ascent causing air trapped beneath the TPS to expand. 
+
+"We're using the unique capabilities of the supersonic F-15B and the 
+aerodynamic flight test fixture to provide a means to eject these 
+divots from the fixture. We record them with a high speed digital 
+video system. We're able to record the divots in flight at up to 
+10,000 frames per second," LIFT project manager Stephen Corda said. 
+
+Aeroscience engineer Ricardo Machin of NASA's Johnson Space Center, 
+Houston, said, "The LIFT flight tests will help validate the models 
+used for debris transport analysis." "In particular, it's going to 
+help us understand whether the divots break up once they come off the 
+external tank, and secondly whether they will trim and begin to fly, 
+or if they'll tumble. The difference between trimming and flying 
+makes a huge difference in the amount of kinetic energy debris can 
+impart to the Shuttle," Machin said. 
+
+The LIFT flight test required two new capabilities: an in-flight foam 
+divot ejection system, and a high-speed video system to track and 
+record the trajectories of the divots in flight. Both capabilities 
+were developed by Dryden engineers in just over two months. 
+
+Dryden's LIFT team designed, fabricated, and ground-tested four 
+different divot ejection systems, completing 70 ground tests to 
+determine and refine the best approach. They designed and procured 
+the very high-speed digital video equipment, including development of 
+a system to synchronize the cameras with the divot ejection system, 
+and they developed videography analysis techniques to quantify divot 
+trajectories. 
+
+For information about NASA's Return to Flight efforts on the Web, 
+visit: http://www.nasa.gov/returntoflight 
+
+For information about NASA and other agency programs on the Web, 
+visit: 
+
+http://www.nasa.gov
+
+	
+-end-

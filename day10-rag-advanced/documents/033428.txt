@@ -1,0 +1,403 @@
+<DOC>
+[DOCID: f:c-9681.wais]
+
+ 
+FALKIRK MINING COMPANY
+January 13, 1997
+CENT 96-81
+
+
+        FEDERAL MINE SAFETY AND HEALTH REVIEW COMMISSION
+
+
+                    1244 SPEER BOULEVARD #280
+                      DENVER, CO 80204-3582
+                  303-844-3577/FAX 303-844-5268
+
+
+                        January 13, 1997
+
+SECRETARY OF LABOR,            :     CIVIL PENALTY PROCEEDING
+  MINE SAFETY AND HEALTH       :
+  ADMINISTRATION (MSHA),       :     Docket No. CENT 96-81
+          Petitioner           :     A.C. No. 32-00491-03514 :
+                               :
+                    v.         :
+                               :     Falkirk Mine
+FALKIRK MINING COMPANY,        :
+          Respondent           :
+
+
+                            DECISION
+
+Appearances:  Kristi L. Floyd, Esq., Office of the
+              Solicitor,
+              U.S. Department of Labor, Denver, Colorado,
+              for Petitioner;
+              Andrew S. Good, Esq., North American Coal
+              Corporation, Dallas, Texas, for Respondent.
+
+Before:  Judge Manning
+
+     This case is before me on a petition for assessment of a
+civil penalty filed by the Secretary of Labor, acting through the
+Mine Safety and Health Administration ("MSHA"), against Falkirk
+Mining Company ("Falkirk"), pursuant to sections 105 and 110 of
+the Federal Mine Safety and Health Act of 1977, 30 U.S.C. §§ 815
+and 820.  The petition alleges one violation of the Secretary's
+safety regulations.
+
+     A hearing was held in Washburn, North Dakota.  The parties
+presented testimony and documentary evidence, but waived post-
+hearing briefs.  For the reasons set forth below, I affirm the
+citation and assess a civil penalty of $50.
+
+   I.  DISCUSSION WITH FINDINGS OF FACT AND CONCLUSIONS OF LAW
+
+     A.  Background
+
+     Falkirk operates the Falkirk Mine, a surface coal mine, in
+     McLean County, North Dakota.  On September 13, 1995, MSHA
+     inspec-tor Calvert Browning issued Citation No. 4058725 to
+     Falkirk alleging a violation of 30 C.F.R. § 77.502.  The
+     citation states:
+
+               The electrical power connections were
+          unguarded and exposed where the welding leads
+          connected to the generator mounted on the 369
+          belt maintenance truck.  Adequate examina-
+          tions were not made to disclose a potentially
+          dangerous condition.
+
+     On November 5, 1995, MSHA issued a subsequent action notice
+for the citation, which states as follows:
+
+               Citation No. 4058725, issued on 09-13-
+          95, for a violation of 77.502, was modified
+          during a Health and Safety Conference held
+          10-27-95.  Mitigating information provided by
+          the operator and the results of the confer-
+          ence were as follows:
+
+                    The Part and Section of Title
+               30 CFR was modified to indicate the
+               proper standard.  The electrical
+               connections were not insulated to
+               the same degree of protection as
+               the remainder of the wire.
+
+               Section I, item 9c is modified to
+          indicate 77.504.
+
+Section 77.504, entitled "Electrical Connections or Splices;
+Suitability," provides:
+
+               Electrical connections or splices in
+          electric conductors shall be mechanically and
+          electrically efficient, and suitable connec-
+          tors shall be used.  All electrical connec-
+          tions or splices shall be reinsulated at
+          least to the same degree of protection as the
+          remainder of the wire.
+
+     Inspector Browning determined that the alleged violation was
+neither serious nor of a significant and substantial nature
+("S&S").  He also determined that Falkirk's negligence was
+moderate.  The Secretary proposed a penalty of $50 for the
+citation.
+
+     The basic facts in this case are not in dispute.  The cited
+     equipment is a welding machine that generates DC current for
+     welding operations.  Two posts are on the front of the
+     welding machine (the "welder"), one marked positive and the
+     other marked negative.  These posts are recessed from the
+     vertical plane of the front of the welder.  Welding leads
+     are attached to each of the posts with lugs.  The lugs are
+     placed around the posts and tightened.  A nut is also
+     attached to the top of each post.  An insulated wire is
+     attached to each lug.  These wires are welding leads that
+     are used in welding operations.
+
+     On the day of the inspection, the positive lead was insu-
+     lated with insulating material.  The positive post and lug
+     were insulated by their recessed position.  An insulating
+     sleeve was present where the wire entered the lug.  The area
+     where the negative lead attached to the welder was not fully
+     insulated.  A bare conductor was present where the welding
+     lead entered the lug because an insulating sleeve was not
+     present.  Part of this bare conductor was outside the
+     vertical plane of the front of the welder.  The conditions
+     at the welder are depicted in Ex. G-7.
+
+     B.  Arguments of the Parties
+
+     The Secretary contends that he established a violation
+     because the electrical connection on the negative side was
+     not reinsulated to the same degree of protection as the
+     remainder of the wire as required by section 77.504.  The
+     Secretary relies on the plain language of the standard and
+     the deference that is owed his reasonable interpretations of
+     safety standards.
+
+     Falkirk argues that the Secretary's interpretation of the
+     safety standard is not reasonable.  First, it contends that
+     the application of the standard is limited to splices and
+     similar electrical connections.  It argues that the cited
+     area was neither a splice nor an electrical connection.
+     Second, it contends that because the cited area was never
+     insulated, the standard does not apply.  Section 77.504
+     requires wires to be "reinsulated" where they have been
+     stripped of insulation to make a splice or similar
+     connection.  Third, Falkirk argues that the Secretary did
+     not require it to insulate the alleged electrical connection
+     to abate the citation.
+
+     Finally, Falkirk argues that the Secretary failed to provide
+     the mining community with notice of his interpretation of
+     the safety standard.  It states that the Secretary's witness
+     could not think of a single MSHA document that supports the
+     Secretary's interpretation of the standard.  Falkirk also
+     maintains that MSHA did not make any other attempt to
+     provide notice of his interpre-tation.  In addition, it
+     notes that the Secretary's witness was unaware of any other
+     citations issued by MSHA under similar con-ditions prior to
+     September 1995.[1]
+
+     C.  Analysis of the Issues
+
+     I find that the Secretary's interpretation of section 77.504
+     is reasonable and is supported by the plain language of the
+     standard.  Thus, I do not consider issues of deference.
+     Mr. Terrance D. Dinkel, an electrical engineer with MSHA's
+     Denver Safety and Health Technology Center, testified that
+     the cited area is an electrical connection as that term is
+     used in the standard.  He defined an electrical connection
+     as a connection of an insulated wire to another insulated
+     wire or to a piece of electric equipment to allow electric
+     current to flow through the connection.  (Tr. 14-16, 22, 37-
+     38).  Examples of electrical connections include a splice, a
+     junction box, a plug in an elec-tric outlet, and an
+     insulated wire attached to a terminal of a light switch.
+
+     The safety standard states on its face that it applies to
+     "all electrical connections."  The term "electrical
+     connection" is not so complicated that it necessarily
+     requires the Secretary to provide written policy guidance to
+     mine operators.  An elec-trical connection, as applicable
+     here, is simply a connection between an insulated wire and a
+     piece of electric equipment which allows current to flow
+     either from the wire to the equipment or from the equipment
+     to the wire.  An electrical connection need not be a splice
+     between two wires.  The connection must include at least one
+     insulated wire to be covered by the standard, how-ever.
+     Connections between uninsulated wires or between an
+     uninsulated wire and a piece of electric equipment are not
+     required to be "reinsulated" at the point where they are
+     connected.  (Tr. 15).
+
+     The connection between the welder and a welding lead is
+     clearly an electrical connection.  (Tr. 62-63).  The welder
+     generates DC current.  This current passes through the
+     electrical connection to the end of the welding lead.  As
+     explained above, the connection is very similar to the
+     connection on an automobile or truck battery.  The lead is
+     attached to a post on the welder by means of a lug that is
+     tightened to the post.  The electricity passes through the
+     post, through the lug, and into the lead.  The lead is an
+     insulated wire.  Thus, I find that the cited connec-tion is
+     an electrical connection in insulated wire as that phrase is
+     used in the standard.
+
+     The cited standard requires wires to be reinsulated at elec-
+     trical connections.  Falkirk maintains that because the area
+     where the leads connect to the welder (the "terminals") had
+     never been insulated, the standard cannot apply.  How can
+     you reinsu-late something that was never insulated in the
+     first place?  It is clear that the posts and the lugs on the
+     welder were never insulated in the sense of an insulating
+     material being applied to them.  It is not clear whether the
+     bare conductor at the negative post was ever insulated.  Mr.
+     Dinkel testified that there are two basic ways to insulate
+     connections under section 77.504.  First, insulating
+     material can be placed around the connection. (Tr. 23-25,
+     52-54).  Second, the connection can be insulated by isola-
+     tion.  Id.  For example, the connection can be placed in a
+     junction box or an air gap can be created by recessing the
+     connection.  Id.
+
+     Mr. Dinkel testified that, at the time the citation was
+     issued, the posts and part of the lugs were insulated by
+     iso-lation.  (Tr. 27-31).  These parts of the connection
+     were recessed from the vertical plane of the front of the
+     welder.
+     He testified that although someone could deliberately come
+     in contact with the posts, they were protected by location
+     and were therefore insulated.  That part of the lug on the
+     positive side that protruded outside of the vertical plane
+     of the welder was protected by an insulating sleeve.  Part
+     of the lug on the nega-tive side also protruded outside the
+     vertical plane of the welder, but this area had not been
+     reinsulated with an insulating sleeve.  Id.  The sleeve was
+     either missing from the negative welder lead or a lead
+     without such a sleeve had been installed.  Dinkel testified
+     that it was this lug and the bare wire entering the lug that
+     was not reinsulated as required by the standard.
+
+     Thus, according to Mr, Dinkel, Falkirk was not required to
+     "reinsulate" those areas of the terminals that were recessed
+     because they were already insulated by location.  (Tr. 58).
+     Or, to put it another way, Falkirk actually reinsulated
+     these areas of the terminals because they were recessed
+     behind the vertical plane of the welder.  Dinkel testified
+     that Falkirk was only required to reinsulate the lug on the
+     negative side where the insulating sleeve was not present.
+     I credit Mr. Dinkel's tes-timony in this regard.  Id.
+
+     Falkirk also argues that the Secretary did not require it to
+     insulate the terminals to abate the citation.  Falkirk
+     abated the citation by installing a rubber flap in front of
+     the terminals.  I find that Falkirk reinsulated the
+     terminals when it abated the citation.  Mr. Dinkel's broad
+     definition of insulation would include the rubber guard that
+     Falkirk installed.  The guard pro-vided physical separation
+     and the guard was made of an insulating material.
+
+     Finally, Falkirk contends that the Secretary failed to pro-
+     vide any notice to the mining community of its requirement
+     that terminals on welders are electrical connections that
+     must be reinsulated.  As stated above, I have determined
+     that the Secre-tary's interpretation of section 77.504 is
+     supported by the plain language of the standard.
+     Ordinarily, when the plain language of safety standard
+     supports a violation, the Secretary is not required to show
+     that he provided additional notice of the requirements of
+     the standard.  Nevertheless, the language of the standard is
+     "simple and brief in order to be broadly adaptable to myriad
+     circumstances."  Kerr-McGee Corp., 3 FMSHRC 2496, 2497
+     (November 1981); Alabama By-Products Corp., 4 FMSHRC 2128,
+     2130 (December 1982).  Such broad standards must afford
+     reasonable notice of what is required or proscribed.  U.S.
+     Steel Corp., 5 FMSHRC 3, 4 (January 1983).  In "order to
+     afford adequate notice and pass constitutional muster, a
+     mandatory safety standard cannot be `so incomplete, vague,
+     indefinite or uncertain that [persons] of common
+     intelligence must necessarily guess at its meaning and
+     differ as to its application.'"  Ideal Cement Co.,
+     12 FMSHRC 2409, 2416 (November 1990)(citation omitted).  A
+     safety standard must "give the person of ordinary
+     intelligence a reason-able opportunity to know what is
+     prohibited, so that he may act accordingly."  Lanham Coal
+     Co., Inc., 13 FMSHRC 1341, 1343 (September 1991)(citation
+     omitted).  In this context, the Commis- sion further
+     explained:
+
+               When faced with a challenge that a
+          safety standard failed to provide adequate
+          notice of prohibited or required conduct, the
+          Commission has applied an objective standard,
+          i.e., the reasonably prudent person test.
+          The Commission recently summarized this test
+          as "whether a reasonably prudent person
+          familiar with the mining industry and the
+          protective purposes of the standard would
+          have recognized the specific prohibition or
+          requirement of the standard."
+
+Id. (citations omitted).
+
+     I find that a reasonably prudent person would have recog-
+nized that the terminals on a welder that generates electricity
+are electrical connections in insulated wire and that section
+77.504 requires that these terminals be insulated to prevent
+inadvertent contact with the terminals by persons working in the
+area.  As stated above, the plain language of the standard states
+that "[a]ll electrical connections ... in insulated wire shall be
+reinsulated at least to the same degree of protection as the
+remainder of the wire."  Given the Secretary's broad, common-
+sense definition of the term insulation set forth by Mr. Dinkel,
+a reasonable prudent person would have recognized that the miss-
+ing sleeve on the lug attached to the negative post needed to be
+replaced to comply with the safety standard.  Additional expla-
+nation or interpretation of the standard by the Secretary was not
+necessary in this instance.
+
+     In addition, a safety booklet published by the American
+Welding Society entitled "Safety in Welding and Cutting," makes
+clear that the accepted industrial safety practice is to protect
+terminals for welding leads from "accidental electrical contact."
+(Tr. 19-20, 48-49, 61-62; Ex. G-5).  This document is consistent
+with the testimony of Mr. Dinkel.
+
+     D.  Civil Penalty Assessment
+
+     Section 110(i) of the Mine Act sets forth six criteria I
+     must consider in determining the appropriate civil penalty.
+     Based on this criteria, I assess a civil penalty of $50 for
+     the violation.  Falkirk was issued 9 citations in the 20
+     months preceding the inspection in this case.  (Ex. G-1).
+     None of the citations were S&S.  It appears that the mine
+     produced 26,000 tons of coal and employed 251 individuals.
+     Id.  I find that the Falkirk Mine is a small to medium sized
+     operation.  The violation was promptly abated in good faith.
+
+     I find that the violation was not serious or S&S.  Only a
+     small area of the electrical connection was exposed.  In
+     addi-tion, the area that was exposed would generally be the
+     ground for the welder and would not pose a safety hazard.
+     (Tr. 59).  A hazard would be presented only if negative
+     welding was being performed with the welder.  In such an
+     instance, the voltage between the negative terminal and the
+     earth would be approxi-mately 75 volts.  (Tr. 55).  There is
+     no evidence that negative welding ever occurs at the mine.
+     (Tr. 64).[2]
+
+     I find that Falkirk's negligence was low.  There is no
+     evidence that the mine's employees were inattentive to
+     safety in general or believed that the condition of the
+     welder presented a safety hazard.  As stated above, there is
+     no showing that the cited condition presented a serious
+     hazard to employees.
+
+                           II.  ORDER
+
+     Accordingly, Citation No. 4058725 is AFFIRMED and Falkirk
+     Mining Company is ORDERED TO PAY the Secretary of Labor the
+     sum of $50.00 within 40 days of the date of this decision.
+
+
+
+
+
+
+                              Richard W. Manning
+                              Administrative Law Judge
+
+
+Distribution:
+
+
+Kristi L. Floyd, Esq., Office of the Solicitor, U.S. Department of Labor,
+1999 Broadway, Suite 1600, Denver, CO 80202-5716 (Certified Mail)
+
+Andrew S. Good, Esq., NORTH AMERICAN COAL CORP., 14785 Preston Road, Suite
+1100, Dallas, TX 75240-7891 (Certified Mail)
+
+                              RWM
+
+
+**FOOTNOTES**
+
+     [1]:  Falkirk raised other issues in a motion for summary
+decision.  I ruled on these issues in an order denying Falkirk's
+motion.  Falkirk Mining Co., 18 FMSHRC 1521 (August 1996).  At
+the time I issued that order, genuine issues of material fact had
+not been resolved.  Accordingly, any findings and conclusions
+contained in that order that are inconsistent with this decision
+are hereby superseded.
+
+  To establish a violation of a safety standard, the Secretary is
+not required to prove that the violation contributed to a safety
+hazard.  Asarco Inc. v. FMSHRC, 868 F.2d 1195, 1197 (10th Cir.
+1989); Allied Products Co., 666 F.2d 890, 892-93 (5th Cir. 1982).
+The degree of the hazard is taken into consideration when
+assessing a civil penalty.

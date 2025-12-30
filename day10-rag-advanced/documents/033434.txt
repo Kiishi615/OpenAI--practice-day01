@@ -1,0 +1,103 @@
+Feb. 22, 2005
+
+Dryden Flight Research Center
+P.O. Box 273
+Edwards, California 93523
+Phone 661/276-3449
+FAX 661/276-3566
+
+Gray Creech 
+NASA Dryden Flight Research Center
+Phone: 661/276-2662
+gray.creech@dfrc.nasa.gov
+
+RELEASE: 05-06
+
+SPACE SHUTTLE RETURN TO FLIGHT GETS A "LIFT" FROM NASA DRYDEN F-15B
+
+To help the Space Shuttle safely return to flight, NASA engineers are 
+acquiring data on how insulating foam debris or "divots" behave when 
+these small pieces are shed from the Shuttle's external fuel tank 
+during launch. 
+
+NASA's Dryden Flight Research Center at Edwards Air Force Base, 
+Calif., is conducting a series of flight tests of the divots as part 
+of the Return to Flight team effort. The Lifting Insulating Foam 
+Trajectory (LIFT) flight test series at Dryden is using the center's 
+F-15B Research Testbed aircraft to test these "divots" in a real 
+flight environment at speeds up to about Mach 2, or twice the speed 
+of sound.
+
+Image Right: All six divots of thermal insulation foam have been 
+ejected from the flight test fixture on NASA's F-15B testbed as it 
+returns from a LIFT experiment flight. NASA Photo EC05-0028-18 by 
+Carla Thomas.
+
+Small-scale divoting occurs when the adhesive on the external tank 
+thermal protection system (TPS) foam fails. This occurs as a result 
+of decreasing atmospheric pressure combined with increased heating 
+during Shuttle ascent causing air trapped beneath the TPS to expand.
+
+LIFT project manager Stephen Corda said objectives of the current 
+flight tests on the F-15B include determining divot structural 
+survivability and stability in flight and quantifying divot 
+trajectories using videography. The flight data of divot trajectories 
+may also be used for Computational Fluid Dynamic code validation.
+
+"We're using the unique capabilities of the supersonic F-15B aircraft 
+and the aerodynamic flight test fixture to provide a means to eject 
+these debris or divots from the fixture, and then photograph them 
+with a high-speed digital video system, where we're able to video 
+these divots in flight at up to 10,000 frames per second," Corda 
+noted. 
+
+NASA' s Space Shuttle Systems Engineering and Integration office at 
+the Johnson Space Center (JSC) in Houston, Texas, is funding the LIFT 
+flight tests at NASA Dryden as part of the Space Shuttle 
+Return-to-Flight effort. JSC aeroscience engineer Ricardo Machin said 
+the current LIFT flight tests will help them validate the models that 
+they use for debris transport analysis. 
+
+"In particular, it's going to help us understand whether the divots 
+break up once they come off the external tank, and secondly whether 
+they will trim and begin to fly, or if they'll tumble. The difference 
+between trimming and flying makes a huge difference in the amount of 
+kinetic energy that this piece of debris can impart to the shuttle," 
+Machin said. 
+
+Image Left: A post-flight inspection of the panels on the F-15B's 
+flight test fixture shows all six divots of TPS foam were 
+successfully ejected during the LIFT experiment. NASA Photo 
+EC05-0030-04 by Tony Landis.
+
+The LIFT flight test requires two new capabilities: an in-flight foam 
+divot ejection system, and a high-speed video system to track and 
+record the trajectories of the divots in flight. Both capabilities 
+were developed by Dryden engineers in just over two months.
+
+Dryden's LIFT team designed, fabricated, and ground-tested four 
+different divot ejection systems, completing 70 ground tests to 
+determine and refine the best approach. NASA Dryden engineers also 
+designed and procured the very high-speed digital video equipment, 
+including development of a system to synchronize the cameras with the 
+divot ejection system. In addition, they developed videography 
+analysis techniques in order to quantify divot trajectories.
+
+-NASA-
+
+TELEVISION EDITORS: Interview segments and B-roll footage to support 
+this release will be aired during the Video File feeds on NASA TV 
+beginning on Feb. 22. NASA TV is available on the Web and via 
+satellite in the continental U.S. on AMC-6, at 72 degrees west 
+longitude, transponder 9, 3880 MHz, vertical polarization, audio at 
+6.8 MHz. In Alaska and Hawaii, NASA TV is available on AMC-7, at 137 
+degrees west longitude, transponder 18, at 4060 MHz, vertical 
+polarization, audio at 6.8 MHz. For NASA TV information and schedules 
+on the Internet, visit: http://www.nasa.gov/ntv.
+
+PHOTO EDITORS: Still photos to support this release are available in 
+high resolution at: 
+http://www1.dfrc.nasa.gov/Gallery/Photo/F-15B/index.html.
+
+	
+-end-

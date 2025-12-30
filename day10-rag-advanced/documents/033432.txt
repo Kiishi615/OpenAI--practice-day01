@@ -1,0 +1,112 @@
+Barbara Selby                                  February 28, 1989
+Headquarters, Washington, D.C.       Embargoed until 11 a.m. EST
+
+Jerry Berg
+Marshall Space Flight Center, Huntsville, Ala.
+
+
+RELEASE:  89-25
+
+SHUTTLE TILE DAMAGE STUDY COMPLETED; "GO" FOR DISCOVERY FLIGHT 
+
+
+     A NASA review panel, investigating the damage to the orbiter 
+Atlantis' thermal protection system during the STS-27 mission, 
+found that the most probable cause was ablative insulating 
+material from the righthand solid rocket booster nose cap 
+dislodging and striking the orbiter about 85 seconds into 
+flight.  
+
+     The Shuttle was traveling at approximately two and one-half 
+times the speed of sound.  At that speed, tests and analyses have 
+demonstrated that material breaking away from forward portions of 
+the vehicle can result in debris striking the orbiter with enough 
+force to damage the tiles.  
+
+     Following its landing on Dec. 6, 1988, inspection revealed 
+that Atlantis had sustained slightly more than 700 individual 
+tile impacts.  The damage was concentrated on the lower surface 
+tiles of the righthand side.  One complete tile was found missing 
+from the damaged area below the crew compartment, and an 
+insulation panel was missing from the right orbital maneuvering 
+system (OMS) pod.
+
+     In its effort to understand how the damage occurred, the 
+review team gathered extensive physical evidence by examining the 
+Atlantis vehicle, reviewing prelaunch inspection records and 
+procedures, assessing tracking camera footage and interviewing 
+Atlantis' flight crew.  They studied the flight hardware design 
+and build records and conducted laboratory tests on the damaged 
+tiles, looking for bits of the damaging debris material.
+
+     In addition to such tests and analyses, the finding 
+concerning the most probable cause was based on:
+
+     o  A determination that several manufacturing process 
+variables on the right booster nose cap were very near their 
+specification limits; and,
+
+     o  The discovery of minute bits of the booster nose cap 
+insulation material and paint embedded in the damaged tiles and 
+OMS pod blankets.
+
+     The review team also reported that debris from other 
+sources, including repaired external tank insulation and cork 
+material covering the solid rocket motor joints, may have caused 
+minor tile damage.
+
+     The team's findings do not pose any constraint for launching 
+Discovery on the STS-29 mission, according to the report.  A 
+major reason for concluding that the STS-29 hardware is ready to 
+fly stems from an improvement made to the suspect insulating 
+material covering the booster nose caps.
+
+     The suspect material, known as Marshall Sprayable Ablator 
+(MSA), was used in its original formulation for nose caps up to 
+and including the STS-27 mission.  Following fabrication of the 
+STS-27 nose caps, changes were made in the material's properties, 
+manufacturing process and application.  The result was an 
+improved product designated MSA-2.  The changes have been shown 
+to produce stronger bonds between the insulating material and the 
+surface on which it is applied.  
+
+     The first boosters to be fabricated with the improved 
+material are those for the upcoming STS-29 flight.  This new 
+material recently was subjected to additional strength tests, 
+called "pull tests," and successful completion of those tests has 
+further bolstered confidence that the material will perform 
+successfully.
+
+     Despite the team's belief that the change in nose cap 
+insulation material will prevent severe tile damage in the 
+future, the report recommended several other steps toward further 
+understanding and to minimize minor damaging debris on future 
+flights.  The recommended steps include:
+
+     o  Expanding an existing operations team to monitor and 
+report on this critical area for all future flights; 
+
+     o  Selectively performing the pull tests on SRB nose cap 
+insulation material prior to future flights;
+
+     o  Inspecting the joint cork material which externally 
+covers solid rocket motor field joints to make sure there are no 
+low density inclusions in the material (such inclusions, if 
+found, normally are repairable);
+
+     o  Reviewing design criteria and searching for process 
+enhancements to further minimize debris potential; and, 
+
+     o  Assigning more data-gathering sources, such as additional 
+cameras, for future flights.  If and when tile damage does occur, 
+such additional sources would yield more data and other evidence, 
+thus providing a better basis for establishing the causes.
+
+     The review panel was chaired by John W. Thomas of Marshall 
+Space Flight Center.  Other members include Jay Honeycutt of the 
+NSTS Program Office, NASA Headquarters (alternate chairman); Jack 
+Nichols, James Earle, James Hester, Keith Henson and Dewey 
+Channell of the Marshall Space Flight Center; Marion Coody, 
+Robert White, Gary Coen and Don McMonagle of the Johnson Space 
+Center; and Charles Stevenson and Judith Kersey of the Kennedy 
+Space Center.

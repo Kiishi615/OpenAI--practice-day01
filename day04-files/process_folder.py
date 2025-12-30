@@ -35,7 +35,7 @@ for file in files:
     with open(file) as f:
         user_text = f.read()
         messages=[{"role":"user", "content": user_text},
-                  {"role":"user", "content": "summarise this in bullet points"}]
+                {"role":"user", "content": "summarise this in bullet points"}]
         response=client.chat.completions.create(
             model="gpt-5-nano",
             messages=messages
