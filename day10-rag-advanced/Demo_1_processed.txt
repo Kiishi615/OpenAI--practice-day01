@@ -1,0 +1,12 @@
+system: You are a helpful assistant that answers 
+                questions based on the provided context from the document. 
+                If the context doesn't contain the answer, say you don't know.
+--------------------------------------------------
+user: What skills do grade 8 workers need
+--------------------------------------------------
+assistant: Grade 8 workers need to have the ability to measure the dimensions of pipes, ducts, and other objects, and to cut, form, and install insulating materials on items with flat, square, or cylindrical surfaces and regular curves. They must be able to fill cracks and smooth rough spots with cement and trowel, and apply fiberglass cloth or other fabric to cover the insulation, using cement, needle and twine or copper wire to complete the installation. They also require good hand and eye coordination to perform processes such as cutting, cementing, lacing, sewing, and trowel application, and skill in using tools like electric knife cutters, sewing and stapling machines, saws, shears, knives, needles, and sailmaker's palms.
+--------------------------------------------------
+user: What else
+--------------------------------------------------
+assistant: I don't have additional information about the skills needed for grade 8 workers in the document.
+--------------------------------------------------
