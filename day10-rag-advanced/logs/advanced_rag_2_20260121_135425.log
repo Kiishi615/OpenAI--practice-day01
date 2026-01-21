@@ -1,0 +1,40 @@
+2026-01-21 13:54:25,501 -__main__ - INFO -main- Starting RAG Document Assistant
+2026-01-21 13:54:25,732 -__main__ - INFO -main- ========================================
+2026-01-21 13:54:31,940 -chromadb.telemetry.product.posthog - INFO -__init__- Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-01-21 13:54:32,260 -__main__ - INFO -main- Available files:
+2026-01-21 13:54:32,260 -__main__ - INFO -main-    1. 033023.pdf
+2026-01-21 13:54:32,260 -__main__ - INFO -main-    2. 033056.pdf
+2026-01-21 13:54:32,260 -__main__ - INFO -main-    3. 033425.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    4. 033426.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    5. 033427.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    6. 033428.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    7. 033429.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    8. 033430.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    9. 033431.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    10. 033432.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    11. 033433.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    12. 033434.txt
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    13. 033547.pdf
+2026-01-21 13:54:32,261 -__main__ - INFO -main-    14. 033561.pdf
+2026-01-21 13:54:32,262 -__main__ - INFO -main-    15. 033567.pdf
+2026-01-21 13:54:32,262 -__main__ - INFO -main-    16. 033568.pdf
+2026-01-21 13:54:32,262 -__main__ - INFO -main-    17. 033687.pdf
+2026-01-21 13:54:32,262 -__main__ - INFO -main-    18. 033691.pdf
+2026-01-21 13:54:32,262 -__main__ - INFO -main-    19. 033759.pdf
+2026-01-21 13:54:32,262 -__main__ - INFO -main-    20. wage.pdf
+2026-01-21 13:54:35,282 -__main__ - INFO -main- Selected file: wage.pdf
+2026-01-21 13:54:35,282 -__main__ - INFO -main- Processing: wage.pdf
+2026-01-21 13:54:45,254 -pikepdf._core - INFO -<module>- pikepdf C++ to Python logger bridge initialized
+2026-01-21 13:54:46,110 -__main__ - INFO -main-    Elements: 58
+2026-01-21 13:54:46,110 -__main__ - INFO -main-    Chunks: 58
+2026-01-21 13:54:50,041 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-21 13:54:50,677 -__main__ - INFO -main-    Done!
+2026-01-21 13:54:50,678 -__main__ - INFO -main- Ready! 1 file(s), 58 chunks
+2026-01-21 13:55:12,679 -__main__ - INFO -main- Query #1: What skills do they need
+2026-01-21 13:55:14,887 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-21 13:55:14,895 -__main__ - INFO -main- Rewritten: What skills do grade 8 workers need?
+2026-01-21 13:55:16,196 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-01-21 13:55:16,269 -__main__ - INFO -main- Retrieved 5 chunks
+2026-01-21 13:55:18,079 -httpx - INFO -_send_single_request- HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-21 13:55:27,029 -__main__ - INFO -main- Saving chat log...
+2026-01-21 13:55:45,366 -__main__ - INFO -main- Session ended. 1 queries processed.

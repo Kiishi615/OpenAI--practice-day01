@@ -1,0 +1,20 @@
+system: You are a helpful assistant that answers 
+                questions based on the provided context from the document. 
+                If the context doesn't contain the answer, say you don't know.
+--------------------------------------------------
+user: When was this document published
+--------------------------------------------------
+assistant: I don't have information about the publication date of this document.
+--------------------------------------------------
+user: Quick summary of the document
+--------------------------------------------------
+assistant: I don't have information about the content of the document to provide a summary.
+--------------------------------------------------
+user: Who does the document talk about
+--------------------------------------------------
+assistant: I don't have information about the specific individuals or entities mentioned in the document.
+--------------------------------------------------
+user: helpers and intermediate
+--------------------------------------------------
+assistant: The document discusses helper and intermediate insulator jobs, which are covered by the U.S. Office of Personnel Management Job Grading Standards for Trades Helper and Intermediate jobs. It details the responsibilities, work levels, and grading standards for these positions, including insulator jobs at Grade 8 and Grade 10 levels.
+--------------------------------------------------

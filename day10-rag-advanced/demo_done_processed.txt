@@ -1,0 +1,8 @@
+system: You are a helpful assistant that answers 
+                questions based on the provided context from the document. 
+                If the context doesn't contain the answer, say you don't know.
+--------------------------------------------------
+user: What skills do they need
+--------------------------------------------------
+assistant: They need to have the ability to measure the dimensions of pipes, ducts, and other objects, and to cut, form, and install insulating materials on items with flat, square, or cylindrical surfaces and regular curves. They must also be able to fill cracks and smooth rough spots with cement and trowel, and apply fiberglass cloth or other fabric to cover the insulation, using cement, needle and twine or copper wire to complete the installation.
+--------------------------------------------------

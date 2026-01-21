@@ -1,6 +1,4 @@
 from pathlib import Path
-from typing import Optional, Any
-
 
 
 def split_into_chunks(text, chunk_size=100):

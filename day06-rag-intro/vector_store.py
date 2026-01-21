@@ -3,7 +3,7 @@ import chromadb
 import os
 from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 from pathlib import Path
-from split_text import text_handler, split_into_chunks
+from shared import text_handler, split_into_chunks
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -42,14 +42,15 @@ def query_database(question, collection, n_results=3):
     
 
 
-def main():
-    empty_collection =initialize_chroma_collection("Randos")
-    full_collection =ingest_document(file, empty_collection)
-    answers= query_database(question, full_collection)
-    print(answers)
+# def main():
+    
+#     empty_collection =initialize_chroma_collection("Randos")
+#     full_collection =ingest_document(file, empty_collection)
+#     answers= query_database(question, full_collection)
+#     print(answers)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 
 

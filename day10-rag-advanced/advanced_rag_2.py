@@ -1,8 +1,8 @@
-import os, re
+import os, logging
 from pathlib import Path
 import chromadb
 from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
-from shared import (load_config, setup_api, get_user_input, 
+from shared import (load_config, setup_api, get_user_input, setup_logging,
                     save_chat_log, get_ai_response,  display_response)
 from dotenv import load_dotenv
 from unstructured.partition.auto import partition 
@@ -243,47 +243,116 @@ Examples:
 
 
 def main():
+    log_file = setup_logging()
+    logger = logging.getLogger(__name__)
+    
+    logger.info("Starting RAG Document Assistant")
+    
     config = load_config()
     client = setup_api()
-    messages=[{"role":"system", "content":"""You are a helpful assistant that answers 
+    messages = [{"role": "system", "content": """You are a helpful assistant that answers 
                 questions based on the provided context from the document. 
                 If the context doesn't contain the answer, say you don't know."""}]
 
     folder = Path('documents')
-
-    file = input("What file do you want to ask a question about? (include extension): ").strip()
-    file_path = folder / file
-
-    # Check file exists
-    if not file_path.exists():
-        print(f"❌ File not found: {file_path}")
+    supported = {'.txt', '.pdf', '.docx', '.doc', '.md', '.html', '.htm', '.pptx', '.csv'}
+    
+    # Choose mode
+    logger.info("=" * 40)
+    mode = input("Load [file] or [folder]? ").strip().lower()
+    
+    collection = get_collection("RAG_COLLECTION")
+    total_chunks = 0
+    
+    if mode == "file":
+        files = [f for f in folder.iterdir() if f.is_file() and f.suffix.lower() in supported]
+        
+        logger.info(f"Available files:")
+        for i, f in enumerate(files, 1):
+            logger.info(f"   {i}. {f.name}")
+        
+        choice = input(f"\nSelect file (1-{len(files)}) or type filename: ").strip()
+        
+        try:
+            file_path = files[int(choice) - 1]
+        except:
+            file_path = folder / choice
+        
+        if not file_path.exists():
+            logger.error(f"File not found: {file_path}")
+            return
+        
+        files_to_process = [file_path]
+        logger.info(f"Selected file: {file_path.name}")
+    
+    elif mode == "folder":
+        files_to_process = [f for f in folder.iterdir() if f.is_file() and f.suffix.lower() in supported]
+        
+        if not files_to_process:
+            logger.error(f"No supported files in {folder}/")
+            return
+        
+        logger.info(f"Found {len(files_to_process)} files:")
+        for f in files_to_process:
+            logger.info(f"   - {f.name}")
+    
+    else:
+        logger.error(f"Invalid choice: {mode}. Use 'file' or 'folder'")
         return
+    
+    # Ingest files
+    for file_path in files_to_process:
+        logger.info(f"Processing: {file_path.name}")
+        
+        try:
+            doc = read_document_with_metadata(str(file_path))
+            logger.info(f"   Elements: {len(doc['elements'])}")
+            
+            chunks = chunk_with_metadata(doc, strategy="auto")
+            logger.info(f"   Chunks: {len(chunks)}")
+            
+            file_id = file_path.stem.replace(" ", "_")[:20]
+            collection.add(
+                documents=[c["text"] for c in chunks],
+                ids=[f"{file_id}_chunk_{i}" for i in range(len(chunks))],
+                metadatas=[
+                    {
+                        "source": c["source"],
+                        "page": c["page"] if isinstance(c["page"], int) else str(c["page"])
+                    }
+                    for c in chunks
+                ]
+            )
+            total_chunks += len(chunks)
+            logger.info(f"   Done!")
+            
+        except Exception as e:
+            logger.error(f"Failed to process {file_path.name}: {e}")
+    
+    logger.info(f"Ready! {len(files_to_process)} file(s), {total_chunks} chunks")
 
-    print(f"\n✅ Loading {file}...")
-
-    # Step 1: Read document
-    doc = read_document_with_metadata(str(file_path))
-    print(f"   Found {len(doc['elements'])} elements")
-
-    # Step 2: Chunk it
-    chunks = chunk_with_metadata(doc, strategy="auto")
-    print(f"   Created {len(chunks)} chunks")
-
-    # Step 3: Ingest into collection
-    collection = get_collection("DEFAULT_COLLECTION_NAME")
-    collection = ingest_chunks(collection, chunks)
-    print(f"   ✅ Ready to query!\n")
-
+    # Query loop
+    query_count = 0
+    
     while True:
         user_input = get_user_input()
+        
         if user_input.lower() == "quit":
-            print("Saving chat log...")
+            logger.info("Saving chat log...")
             save_name = input("Enter filename to save log: ")
             save_chat_log(messages, save_name)
+            logger.info(f"Session ended. {query_count} queries processed.")
             break
         
+        query_count += 1
+        logger.info(f"Query #{query_count}: {user_input}")
+        
         rewritten_query = rewrite_query(messages, user_input, client)
+        logger.info(f"Rewritten: {rewritten_query}")
+        
         context = query_rag(rewritten_query, collection, n_results=5)
+        logger.info(f"Retrieved {len(context)} chunks")
+        
         context = " ".join(context)
 
         temp_messages = [
