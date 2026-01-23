@@ -11,3 +11,4 @@ from shared.chunking_strategies import ( fixed_size_chunks,
 
 from shared.read_document import read_document
 from shared.vector_store import initialize_chroma_collection
+from shared.inspector import params, full_inspect, p, fi

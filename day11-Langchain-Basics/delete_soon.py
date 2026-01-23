@@ -1,12 +1,10 @@
-# Core package
-pip install langchain
+from shared import params, full_inspect, p, fi
 
-# For LLM providers
-pip install langchain-openai      # OpenAI/GPT
-pip install langchain-anthropic   # Claude
-pip install langchain-google-genai 
+from langchain_google_genai.chat_models import ChatGoogleGenerativeAI
 
-# Common additions
-pip install langchain-community   
-pip install langchain-chroma      
-pip install langchain-text-splitters
+
+# Quick check
+p(ChatGoogleGenerativeAI)
+
+# Detailed check
+full_inspect(ChatGoogleGenerativeAI)
