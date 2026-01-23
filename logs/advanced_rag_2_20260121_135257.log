@@ -1,3 +1,0 @@
-2026-01-21 13:52:57,357 -__main__ - INFO -main- Starting RAG Document Assistant
-2026-01-21 13:52:57,635 -__main__ - INFO -main- ========================================
-2026-01-21 13:53:06,411 -chromadb.telemetry.product.posthog - INFO -__init__- Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
