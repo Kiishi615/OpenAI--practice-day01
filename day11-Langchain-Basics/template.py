@@ -16,7 +16,7 @@
 #     return response.text
 
 from langchain_core.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI  # or another LLM provider
+from langchain_openai import ChatOpenAI 
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -31,9 +31,8 @@ H: {prompt}
 prompt_template = PromptTemplate.from_template(template=TEMPLATE)
 
 # Create an LLM instance
-llm = ChatOpenAI(model="gpt-3.5-turbo")  # or use ChatAnthropic, etc.
+llm = ChatOpenAI(model="gpt-3.5-turbo") 
 
-# Chain the prompt with the LLM
 chain = prompt_template | llm
 
 def summarize(prompt: str) -> str:
