@@ -1,7 +1,0 @@
-from typing import Optional
-
-name: Optional[str] = None
-
-name=14
-
-print(name)
