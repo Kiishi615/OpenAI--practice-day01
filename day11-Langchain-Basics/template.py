@@ -1,26 +1,25 @@
-# from langchain_core.prompts import PromptTemplate
-
-# TEMPLATE = '''
-# System:
-# {instruction}
-
-# Human: {prompt}
-# '''
-
-# prompt_template = PromptTemplate.from_template(template= TEMPLATE)
-
-# def summarize (prompt:str)->str:
-#     response = prompt_template.invoke({'instruction': '''The chatbot
-# should summarize whatever the user sends''',
-# 'prompt': prompt })
-#     return response.text
+"""LLM Service module for text processing tasks."""
 
 from langchain_core.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI 
+from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
+# Load environment variables
 load_dotenv()
 
+# ============ Public Exports ============
+__all__ = [
+    'TEMPLATE',
+    'INSTRUCTIONS',
+    'chain',
+    'invoke_chain',
+    'summarize',
+    'translate',
+    'qa',
+    'classify',
+]
+
+# ============ Configuration ============
 TEMPLATE = '''
 System:
 {instruction}
@@ -28,41 +27,51 @@ System:
 H: {prompt}
 '''
 
-prompt_template = PromptTemplate.from_template(template=TEMPLATE)
+INSTRUCTIONS = {
+    'summarize': 'The chatbot should summarize whatever the user sends',
+    'translate': 'The chatbot should translate to french whatever the user sends',
+    'qa': 'The chatbot should answer every question whatever the user sends',
+    'classify': 'The chatbot should classify into categories whatever the user sends',
+}
 
-# Create an LLM instance
-llm = ChatOpenAI(model="gpt-3.5-turbo") 
+# ============ Setup ============
+_prompt_template = PromptTemplate.from_template(template=TEMPLATE)
+_llm = ChatOpenAI(model="gpt-3.5-turbo")
+chain = _prompt_template | _llm
 
-chain = prompt_template | llm
 
-def summarize(prompt: str) -> str:
+# ============ Core Function ============
+def invoke_chain(instruction: str, prompt: str) -> str:
+    """Base function to invoke the chain with given instruction and prompt."""
     response = chain.invoke({
-        'instruction': 'The chatbot should summarize whatever the user sends',
+        'instruction': instruction,
         'prompt': prompt
     })
-    return response.content  # .content for chat models
+    return response.content
+
+
+# ============ Task Functions ============
+def summarize(prompt: str) -> str:
+    """Summarize the given text."""
+    return invoke_chain(INSTRUCTIONS['summarize'], prompt)
+
 
 def translate(prompt: str) -> str:
-    response = chain.invoke({
-        'instruction': 'The chatbot should translate to french whatever the user sends',
-        'prompt': prompt
-    })
-    return response.content  #
+    """Translate the given text to French."""
+    return invoke_chain(INSTRUCTIONS['translate'], prompt)
 
-def QA(prompt: str) -> str:
-    response = chain.invoke({
-        'instruction': 'The chatbot should answer every question whatever the user sends',
-        'prompt': prompt
-    })
-    return response.content  #
+
+def qa(prompt: str) -> str:
+    """Answer questions based on the given prompt."""
+    return invoke_chain(INSTRUCTIONS['qa'], prompt)
+
 
 def classify(prompt: str) -> str:
-    response = chain.invoke({
-        'instruction': 'The chatbot should classify into categories whatever the user sends',
-        'prompt': prompt
-    })
-    return response.content  #
+    """Classify the given text into categories."""
+    return invoke_chain(INSTRUCTIONS['classify'], prompt)
 
-prompt = input('What do you want me to summarize? \n')
 
-print(f"\n {summarize(prompt)}")
+# ============ Main Execution ============
+if __name__ == "__main__":
+    user_prompt = input('What do you want me to summarize? \n')
+    print(f"\n{summarize(user_prompt)}")
