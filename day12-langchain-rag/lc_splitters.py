@@ -1,4 +1,4 @@
-from langchain_community.document_loaders import TextLoader, PyPDFLoader, CSVLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter, CharacterTextSplitter, TokenTextSplitter
 
 loader = PyPDFLoader("./docs/12mb.pdf")

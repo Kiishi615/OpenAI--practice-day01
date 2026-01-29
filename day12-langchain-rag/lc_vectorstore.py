@@ -6,7 +6,8 @@ load_dotenv()
 embeddings = OpenAIEmbeddings(model = "text-embedding-3-small")
 
 vector_store = Chroma(
-    collection_name = "lc_vectorstore"
+    collection_name = "lc_vectorstore",
+    embedding_function= embeddings
 )
 
 vector_store.add_texts(
