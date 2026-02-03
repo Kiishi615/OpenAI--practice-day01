@@ -38,11 +38,21 @@ while True:
         messages.append({"role": "user", "content": user_input })
 
         response = openai.chat.completions.create(
-            model = "gpt-5-nano",
-            messages= messages
+            model = "gpt-4o-mini",
+            messages= messages,
+            stream= True,
+            stream_options = {"include_usage": True},
         )
-        messages.append({"role": "assistant", "content": f"{response.choices[0].message.content}" })
 
-    print(f"\nAI: {response.choices[0].message.content}")
+        full_response = ""
+        for chunk in response:
+            if chunk.choices and chunk.choices[0].delta.content is not None:
+                full_response += chunk.choices[0].delta.content
+                print(chunk.choices[0].delta.content, end="", flush=True)
+
+        print()
+        messages.append({"role": "assistant", "content": full_response })
+
+
 
 
