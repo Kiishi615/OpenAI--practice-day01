@@ -3,7 +3,7 @@ from shared.refactored_chatbot import  (load_config, setup_api,
                                         get_ai_response, display_response)
 
 from shared.rate_limits import response_with_retry
-from shared.logging_config import setup_logging
+from shared.logging_config_prod import setup_logging
 from shared.split_text import split_into_chunks, text_handler
 from shared.chunking_strategies import ( fixed_size_chunks,
                                         overlap_chunks, sentence_chunks,
