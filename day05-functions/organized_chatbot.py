@@ -1,8 +1,7 @@
-from refactored_chatbot import  (load_config, setup_api, get_user_input, 
-                                get_user_file,save_chat_log,
-                                get_ai_response,  display_response)
 from file_functions import read_text_file, save_text_file
 
+from shared import (display_response, get_ai_response, get_user_file,
+                    get_user_input, load_config, save_chat_log, setup_api)
 
 
 def main():

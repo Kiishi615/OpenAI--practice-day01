@@ -1,16 +1,20 @@
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_community.document_loaders import  UnstructuredFileLoader, DirectoryLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
-from langchain_core.runnables import RunnablePassthrough
+import os
+import uuid
+from pathlib import Path
+
+from dotenv import load_dotenv
+from langchain_community.document_loaders import (DirectoryLoader,
+                                                    UnstructuredFileLoader)
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_pinecone import PineconeVectorStore
-from pinecone import Pinecone
+from langchain_core.runnables import RunnablePassthrough
 from langchain_experimental.text_splitter import SemanticChunker
-from pathlib import Path
-import uuid, os
-from dotenv import load_dotenv
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import OpenAIEmbeddings
+from langchain_pinecone import PineconeVectorStore
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from pinecone import Pinecone
+
 load_dotenv()
 
 DOCS_DIR = Path(__file__).parent / "docs"
