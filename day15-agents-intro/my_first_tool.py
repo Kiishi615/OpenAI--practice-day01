@@ -10,11 +10,17 @@ llm = init_chat_model(model= "gpt-4o-mini")
 @tool
 def calculate_age(birth_year:int) -> int:
     "Calculate age from the birth year"
-    return 2026 - birth_year
+    try:
+        return 2026 - birth_year
+    except Exception as e:
+        return f"Error calculating age: {e}"
 
 @tool
 def reverse_string(text: str)-> str:
     "Reverse any string"
-    return text[::-1]
+    try:
+        return text[::-1]
+    except Exception as e:
+        return f"Error reversing string: {e}"
 
 

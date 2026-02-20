@@ -24,7 +24,7 @@ def calculator(expression: str):
         result = numexpr.evaluate(expression).item()
         return str(result)
     except Exception as e:
-        print(f"Error: not allowed {e}")
+        return f"Error evaluating expression '{expression}': {e}"
 
 
 
@@ -32,37 +32,53 @@ def calculator(expression: str):
         "Converts temperature from 'Fahrenheit' to 'Celsius' and vice versa"
         "curr_unit must be exactly 'fahrenheit' or 'celsius' (lowercase, full word)."))
 def temp_converter(curr_unit: str, temp: float)-> float:
-    curr_unit = curr_unit.lower()
-    if curr_unit == "fahrenheit":
-        temperature = (temp-32) * 5/9
-    if curr_unit == "celsius":
-        temperature = (temp* 9/5) + 32
-    return temperature
+    try:
+        curr_unit = curr_unit.lower()
+        if curr_unit == "fahrenheit":
+            return (temp-32) * 5/9
+        elif curr_unit == "celsius":
+            return (temp* 9/5) + 32
+        else:
+            return f"Error: curr_unit must be 'fahrenheit' or 'celsius', got '{curr_unit}'"
+    except Exception as e:
+        return f"Error converting temperature: {e}"
 
 
 
-@tool('distance_converter', description="Converts distance from 'Kilometer' to 'Miles' and vice versa")
+@tool('distance_converter', description=("Converts distance from 'Kilometer' to 'Miles' and vice versa"
+        "curr_unit must be exactly 'kilometer' or 'miles' (lowercase, full word)."))
+                                        
 def distance_converter(curr_unit: str, distance: float)-> float:
-    curr_unit = curr_unit.lower()
-    if curr_unit == "kilometer":
-        converted_distance = distance *0.621371
-    if curr_unit == "miles":
-        converted_distance = distance / 0.621371
-    return converted_distance
+    try:
+        curr_unit = curr_unit.lower()
+        if curr_unit == "kilometer":
+            return distance * 0.621371
+        elif curr_unit == "miles":
+            return distance / 0.621371
+        else:
+            return f"Error: curr_unit must be 'kilometer' or 'miles', got '{curr_unit}'"
+    except Exception as e:
+        return f"Error converting distance: {e}"
 
 
-@tool('weight_converter', description="Converts distance from 'Kilograms' to 'Pounds' and vice versa")
+@tool('weight_converter', description=("Converts distance from 'Kilograms' to 'Pounds' and vice versa"
+        "curr_unit must be exactly 'kilograms' or 'pounds' (lowercase, full word)."))
+                                    
 def weight_converter(curr_unit: str, weight: float)-> float:
-    curr_unit = curr_unit.lower()
-    if curr_unit == "kilogram":
-        converted_weight = weight *2.20462
-    if curr_unit == "pounds":
-        converted_weight = weight /2.20462
-    return converted_weight 
+    try:
+        curr_unit = curr_unit.lower()
+        if curr_unit == "kilograms":
+            return weight * 2.20462
+        elif curr_unit == "pounds":
+            return weight / 2.20462
+        else:
+            return f"Error: curr_unit must be 'kilograms' or 'pounds', got '{curr_unit}'"
+    except Exception as e:
+        return f"Error converting weight: {e}" 
 
 agent = create_agent(
     model= model,
-    tools= [calculator, distance_converter, temp_converter],
+    tools= [calculator, distance_converter, temp_converter, weight_converter],
     system_prompt=(
     "You are a helpful math and conversion assistant.\n\n"
     "You have the following tools:\n"
@@ -76,20 +92,21 @@ agent = create_agent(
     checkpointer= checkpointer
 )
 
-while True:
-    user_input =input('Human: ')
-    if user_input.lower() in ("quit", "exit"):
-        print("AI: Goodbye")
-        break
-    try:
-        response =agent.invoke(
-            {
-            'messages' : [{'role': 'user', 'content': user_input}]
-            },
-            config= config
+if __name__ == "__main__":
+    while True:
+        user_input =input('Human: ')
+        if user_input.lower() in ("quit", "exit"):
+            print("AI: Goodbye")
+            break
+        try:
+            response =agent.invoke(
+                {
+                'messages' : [{'role': 'user', 'content': user_input}]
+                },
+                config= config
 
-        )
-        print(f"AI: {response['messages'][-1].content}\n")
-    except Exception as e:
-        print(f"Something went wrong: {e}")
-        print("Try again.\n")
+            )
+            print(f"AI: {response['messages'][-1].content}\n")
+        except Exception as e:
+            print(f"Something went wrong: {e}")
+            print("Try again.\n")

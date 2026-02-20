@@ -26,8 +26,11 @@ checkpointer = InMemorySaver()
     "found in encyclopedias."
 ))
 def search_web(question: str):
-    result = search.invoke(question)
-    return result
+    try:
+        result = search.invoke(question)
+        return result
+    except Exception as e:
+        return f"Error searching the web: {e}"
 
 @tool ('search_wiki', description=(
     "Search Wikipedia for well-established facts, historical events, "
@@ -35,12 +38,14 @@ def search_web(question: str):
     "encyclopedic explanations."
 ))
 def search_wiki(question: str):
-
-    docs = retriever.invoke(question)
-    
-    result = "\n\n".join(doc.page_content for doc in docs)
-    
-    return result
+    try:
+        docs = retriever.invoke(question)
+        
+        result = "\n\n".join(doc.page_content for doc in docs)
+        
+        return result
+    except Exception as e:
+        return f"Error searching Wikipedia: {e}"
 
 
 agent = create_agent(
@@ -54,23 +59,24 @@ agent = create_agent(
     checkpointer= checkpointer
 )
 
-while True:
-    user_input =input('Human: ')
-    if user_input.lower() in ("quit", "exit"):
-        print("AI: Goodbye")
-        break
-    try:
-        response =agent.invoke(
-            {
-            'messages' : [{'role': 'user', 'content': user_input}]
-            },
-            config= config
+if __name__ == "__main__":
+    while True:
+        user_input =input('Human: ')
+        if user_input.lower() in ("quit", "exit"):
+            print("AI: Goodbye")
+            break
+        try:
+            response =agent.invoke(
+                {
+                'messages' : [{'role': 'user', 'content': user_input}]
+                },
+                config= config
 
-        )
-        print(f"AI: {response['messages'][-1].content}\n")
-    except Exception as e:
-        print(f"Something went wrong: {e}")
-        print("Try again.\n")
+            )
+            print(f"AI: {response['messages'][-1].content}\n")
+        except Exception as e:
+            print(f"Something went wrong: {e}")
+            print("Try again.\n")
 
 # print(response)
 # inspect(response, help=True)
