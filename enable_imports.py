@@ -1,6 +1,7 @@
 import sys
 from pathlib import Path
 
+
 def setup_november_imports():
     this_file=Path(__file__)
     november_challenge_folder =this_file.parent
